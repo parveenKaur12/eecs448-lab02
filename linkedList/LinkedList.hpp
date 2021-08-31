@@ -108,29 +108,6 @@ bool LinkedList<T>::removeBack()
 	/** TODO 
 		Fix this method
 	*/
-	if(m_front == nullptr)
-	  {
-	    isRemoved = false;
-	  }
-	else{
-	  secondintoLast = m_front;
-          lastNode = m_front;	  
-	   for(int i = 1; i < m_size-1; i++)
-	   {
-	      secondintoLast = secondintoLast->getNext();
-	   }
-        	lastNode= secondintoLast->getNext();
-	       	if(lastNode != nullptr)
-		 {
-		    delete lastNode;
-		    lastNode= nullptr;
-		    secondintoLast->setNext(nullptr);
-		    isRemoved = true;
-		    m_size--;
-		  
-	       	  }
-
-	}
 
 	return(isRemoved);
 }	
